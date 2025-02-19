@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 64796721}
   - component: {fileID: 64796723}
   - component: {fileID: 64796722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Air Dungeon Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,7 +1870,7 @@ GameObject:
   - component: {fileID: 428116054}
   - component: {fileID: 428116056}
   - component: {fileID: 428116055}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire Dungeon Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2119,8 +2119,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 902020323
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.43749994, z: 0}
   m_MaxChunkCount: 16
@@ -2222,7 +2222,7 @@ GameObject:
   - component: {fileID: 704905469}
   - component: {fileID: 704905471}
   - component: {fileID: 704905470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flooring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,7 +2238,7 @@ Transform:
   m_GameObject: {fileID: 704905468}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.07, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2285,9 +2285,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 902020323
+  m_SortingLayer: -1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.43749994, z: 0}
   m_MaxChunkCount: 16
@@ -27019,7 +27019,7 @@ GameObject:
   - component: {fileID: 799205978}
   - component: {fileID: 799205980}
   - component: {fileID: 799205979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Air Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27083,8 +27083,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 902020323
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.43749994, z: 0}
   m_MaxChunkCount: 16
@@ -27186,7 +27186,7 @@ GameObject:
   - component: {fileID: 995057978}
   - component: {fileID: 995057980}
   - component: {fileID: 995057979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Water Dungeon Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27371,7 +27371,7 @@ GameObject:
   - component: {fileID: 1012006915}
   - component: {fileID: 1012006917}
   - component: {fileID: 1012006916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Extra flooring for asatetics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27435,7 +27435,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 902020323
-  m_SortingLayer: 2
+  m_SortingLayer: -1
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -27598,7 +27598,7 @@ GameObject:
   - component: {fileID: 1210784784}
   - component: {fileID: 1210784786}
   - component: {fileID: 1210784785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Water Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27662,8 +27662,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 902020323
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.43749994, z: 0}
   m_MaxChunkCount: 16
@@ -27829,7 +27829,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 902020323
-  m_SortingLayer: 2
+  m_SortingLayer: -1
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.53125, y: 1.6875, z: 0}
@@ -29252,7 +29252,7 @@ GameObject:
   - component: {fileID: 1873023038}
   - component: {fileID: 1873023040}
   - component: {fileID: 1873023039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Earth Dungeon Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29408,6 +29408,51 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2147184493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147184495}
+  - component: {fileID: 2147184494}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: SpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2147184494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147184493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cd836fcd609cd459305009b166defe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 6180558815739463641, guid: 855de0fe056f85949bf5e3ce2823638d, type: 3}
+--- !u!4 &2147184495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147184493}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.37, y: -0.32, z: -0.14564586}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147459746
 GameObject:
   m_ObjectHideFlags: 0
@@ -29419,7 +29464,7 @@ GameObject:
   - component: {fileID: 2147459747}
   - component: {fileID: 2147459749}
   - component: {fileID: 2147459748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Earth Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29483,8 +29528,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 902020323
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.43749994, z: 0}
   m_MaxChunkCount: 16
@@ -29581,3 +29626,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 92556188}
   - {fileID: 1128586429}
+  - {fileID: 2147184495}
