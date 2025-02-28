@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Ws_W_24
+  m_Name: cobble-1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1356595663, guid: ed4edcc13cc60764181cc25a7679faf6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4928b8b516a424e92a8f65e37ea3473c, type: 3}
+  m_Color: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 1}
   m_Transform:
     e00: 1
     e01: 0
@@ -32,5 +32,5 @@ MonoBehaviour:
     e32: 0
     e33: 1
   m_InstancedGameObject: {fileID: 0}
-  m_Flags: 1
+  m_Flags: 0
   m_ColliderType: 1
