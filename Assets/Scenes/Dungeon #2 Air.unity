@@ -2635,7 +2635,7 @@ GameObject:
   - component: {fileID: 1452337286}
   - component: {fileID: 1452337285}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2669,6 +2669,7 @@ Transform:
   - {fileID: 885539825}
   - {fileID: 258942329}
   - {fileID: 727860260}
+  - {fileID: 1988462811}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988462809
@@ -2752,11 +2753,11 @@ Transform:
   m_GameObject: {fileID: 1988462809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2702999, y: 0.06, z: 0}
+  m_LocalPosition: {x: 3.8802998, y: 0.13, z: 0}
   m_LocalScale: {x: 52.87347, y: 41.63352, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1452337286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2055287290
 GameObject:
@@ -2970,4 +2971,3 @@ SceneRoots:
   - {fileID: 1452337286}
   - {fileID: 167116441}
   - {fileID: 2110900180}
-  - {fileID: 1988462811}
