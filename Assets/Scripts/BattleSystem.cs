@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using UnityEngine.UI;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
@@ -9,6 +11,13 @@ public class BattleSystem : MonoBehaviour
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
+
+    public BattleHUD playerHUD;
+    public BattleHUD enemyHUD;
+
+    public Button AttackButton;
+    public Button SkillsButton;
+    public Button ItemsButton;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -20,17 +29,107 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
-        SetupBattle();
+        StartCoroutine(SetupBattle());
     }
 
-    void SetupBattle(){
+    IEnumerator SetupBattle(){
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
+        //disable buttons
+        AttackButton.interactable = false;
+        SkillsButton.interactable = false;
+        ItemsButton.interactable = false;
+
         dialogueText.text = enemyUnit.unitName + " approaches!";
+
+        playerHUD.SetHUD(playerUnit);
+        enemyHUD.SetHUD(enemyUnit);
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
+
+    void PlayerTurn(){
+        dialogueText.text = "Choose an action.";
+
+        //enable buttons
+        AttackButton.interactable = true;
+        SkillsButton.interactable = true;
+        ItemsButton.interactable = true;
+    }
+
+    IEnumerator PlayerAttack(){
+        //disable buttons
+        AttackButton.interactable = false;
+        SkillsButton.interactable = false;
+        ItemsButton.interactable = false;
+
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialogueText.text = playerUnit.unitName + " is attacking!";
+
+        yield return new WaitForSeconds(2f);
+
+        if(isDead){
+            state = BattleState.WON;
+            EndBattle();
+        }else{
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
+    }
+
+    //!!!! TEMPORARY, ENEMY SIMPLY ATTACKS FOR NOW !!!!!!!!!!!!!!
+    IEnumerator EnemyTurn(){
+        //disable buttons
+        AttackButton.interactable = false;
+        SkillsButton.interactable = false;
+        ItemsButton.interactable = false;
+
+        dialogueText.text = enemyUnit.unitName + " attacks!";
+        
+        yield return new WaitForSeconds(1f);
+
+        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+        yield return new WaitForSeconds(1f);
+
+        if(isDead){
+            state = BattleState.LOST;
+            EndBattle();
+        }else{
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
+    }
+
+    void EndBattle(){
+        //disable buttons
+        AttackButton.interactable = false;
+        SkillsButton.interactable = false;
+        ItemsButton.interactable = false;
+        
+        if (state == BattleState.WON){
+            dialogueText.text = "You won the battle!";
+        }
+        else if (state == BattleState.LOST){
+            dialogueText.text = "You were defeated.";
+        }
+    }
+
+    public void OnAttackButton(){
+        if (state != BattleState.PLAYERTURN){
+            return;
+        }
+
+        StartCoroutine(PlayerAttack());
     }
 
 }

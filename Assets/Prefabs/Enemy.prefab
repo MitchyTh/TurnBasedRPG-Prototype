@@ -96,7 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3736004083822697763}
-  - component: {fileID: 8346928934366027692}
+  - component: {fileID: 854414461391908876}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -120,7 +120,7 @@ Transform:
   - {fileID: 3135791539237836649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8346928934366027692
+--- !u!114 &854414461391908876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Ghost Lady
-  unitLevel: 5
   damage: 5
   maxHP: 30
   currentHP: 30
