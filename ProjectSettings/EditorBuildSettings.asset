@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Battle-Screen.unity
+    guid: 8599d073d192948feb6df42dc7094187
+  - enabled: 1
     path: Assets/Scenes/central-area.unity
     guid: fbe75167276064e43b4f7856b39c9e25
   - enabled: 1

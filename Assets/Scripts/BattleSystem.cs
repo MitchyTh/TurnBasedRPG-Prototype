@@ -36,8 +36,20 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyUnit = enemyGO.GetComponent<Unit>();
+        // Get enemy from EncounterManager if available
+        if (EncounterManager.Instance.enemyUnit != null)
+        {
+            // enemyUnit = EncounterManager.Instance.enemyUnit;
+            Debug.Log("Instantiating enemy: " + EncounterManager.Instance.enemyUnit.unitName);
+            GameObject enemyGO = Instantiate(EncounterManager.Instance.enemyUnit.gameObject, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+        }
+        else
+        {
+            // Fallback in case no enemy was set
+            GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+        }
 
         //disable buttons
         AttackButton.interactable = false;
