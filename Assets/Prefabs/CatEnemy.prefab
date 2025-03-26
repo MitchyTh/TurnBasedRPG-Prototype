@@ -129,10 +129,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9104403691312146825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07364ccd3b9e0541bae5cc9c861e88e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1aa1a0a6cd381f342a0b7d932bf574d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Cat
   damage: 5
-  maxHP: 30
-  currentHP: 30
+  maxHP: 40
+  currentHP: 40
+  skills: []

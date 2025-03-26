@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1011064989783362105}
   - component: {fileID: 5521874590961568854}
+  - component: {fileID: 7834833059242964222}
   m_Layer: 0
   m_Name: PlayerBattle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,13 +43,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 3233724141538855653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07364ccd3b9e0541bae5cc9c861e88e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1aa1a0a6cd381f342a0b7d932bf574d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Player
-  damage: 10
-  maxHP: 25
-  currentHP: 15
+  unitName: 
+  damage: 0
+  maxHP: 0
+  currentHP: 0
+  skills: []
+--- !u!114 &7834833059242964222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3233724141538855653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ad9f7f4eb6d0140ac49ffe379f40ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8843744587075588746
 GameObject:
   m_ObjectHideFlags: 0

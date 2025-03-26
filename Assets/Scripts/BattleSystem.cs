@@ -134,6 +134,7 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.LOST){
             dialogueText.text = "You were defeated.";
         }
+  
     }
 
     public void OnAttackButton(){
