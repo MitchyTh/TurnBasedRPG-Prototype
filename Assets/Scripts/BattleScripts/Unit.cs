@@ -21,6 +21,7 @@ public class Unit : MonoBehaviour
             currentHP = playerStats.HP;
             damage = playerStats.damage;
             skills = playerStats.skillList;
+            maxHP = playerStats.MaxHP;
         }
     }
 
