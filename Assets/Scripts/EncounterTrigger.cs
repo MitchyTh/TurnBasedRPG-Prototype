@@ -9,6 +9,8 @@ public class EncounterTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerPrefs.SetString("PreviousScene", SceneManager.GetActiveScene().name);
+            PlayerPrefs.Save();
             EncounterManager.Instance.enemyUnit = enemyPrefab; // Save enemy data
             SceneManager.LoadScene("Battle-Screen");
         }

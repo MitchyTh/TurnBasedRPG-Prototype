@@ -2,10 +2,12 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
+    public string currentScene;
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
 
@@ -122,6 +124,10 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    public void LoadArea()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("PreviousScene", "DefaultScene"));
+    }
     void EndBattle(){
         //disable buttons
         AttackButton.interactable = false;
@@ -134,7 +140,7 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.LOST){
             dialogueText.text = "You were defeated.";
         }
-  
+        LoadArea();
     }
 
     public void OnAttackButton(){
