@@ -1,8 +1,7 @@
 using System.IO.Enumeration;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Skills", menuName = "Player/Create new skill")]
-public class SkillBase : ScriptableObject
+public abstract class SkillBase : ScriptableObject
 {
 
     [SerializeField] string skillName;
@@ -14,5 +13,11 @@ public class SkillBase : ScriptableObject
 
     [SerializeField] int accuracy;
 
+    public string SkillName => skillName;
+    public string Description => description;
+    public int Power => power;
+    public int Accuracy => accuracy;
 
+
+    public abstract void UseSkill(Unit user, Unit target);
 }
