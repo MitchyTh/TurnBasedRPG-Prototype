@@ -3,6 +3,8 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
@@ -17,9 +19,17 @@ public class BattleSystem : MonoBehaviour
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
 
+    //Initial Action buttons
     public Button AttackButton;
     public Button SkillsButton;
     public Button ItemsButton;
+    public Button ReturnButton;
+
+    //Skill menu buttons
+    //TODO
+
+    public CanvasGroup ActionPanel;
+    public CanvasGroup SkillPanel;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -143,6 +153,9 @@ public class BattleSystem : MonoBehaviour
         LoadArea();
     }
 
+
+//Action menu buttons
+
     public void OnAttackButton(){
         if (state != BattleState.PLAYERTURN){
             return;
@@ -151,4 +164,37 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerAttack());
     }
 
+    public void OnSkillsButton()
+    {
+        if (state != BattleState.PLAYERTURN) { 
+            return;
+        }
+
+        ActionPanel.alpha = 0;
+        ActionPanel.interactable = false;
+        ActionPanel.blocksRaycasts = false;
+
+        SkillPanel.alpha = 1;
+        SkillPanel.interactable = true;
+        SkillPanel.blocksRaycasts = true;
+
+    }
+
+    //Skill menu buttons
+    public void OnReturnButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+        {
+            return;
+        }
+
+        ActionPanel.alpha = 1;
+        ActionPanel.interactable = true;
+        ActionPanel.blocksRaycasts = true;
+
+        SkillPanel.alpha = 0;
+        SkillPanel.interactable = false;
+        SkillPanel.blocksRaycasts = false;
+
+    }
 }
