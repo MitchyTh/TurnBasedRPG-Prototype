@@ -21,12 +21,13 @@ public class BattleSystem : MonoBehaviour
 
     //Initial Action buttons
     public Button AttackButton;
-    public Button SkillsButton;
+    public Button SkillChoiceButton;
     public Button ItemsButton;
     public Button ReturnButton;
 
     //Skill menu buttons
-    //TODO
+    public GameObject SkillButtonPrefab;
+    public Transform SkillButtonContainer;
 
     public CanvasGroup ActionPanel;
     public CanvasGroup SkillPanel;
@@ -44,7 +45,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
-    IEnumerator SetupBattle(){
+    IEnumerator SetupBattle() {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
@@ -65,7 +66,7 @@ public class BattleSystem : MonoBehaviour
 
         //disable buttons
         AttackButton.interactable = false;
-        SkillsButton.interactable = false;
+        SkillChoiceButton.interactable = false;
         ItemsButton.interactable = false;
 
         dialogueText.text = enemyUnit.unitName + " approaches!";
@@ -79,19 +80,22 @@ public class BattleSystem : MonoBehaviour
         PlayerTurn();
     }
 
-    void PlayerTurn(){
+    void PlayerTurn() {
         dialogueText.text = "Choose an action.";
 
         //enable buttons
         AttackButton.interactable = true;
-        SkillsButton.interactable = true;
+        SkillChoiceButton.interactable = true;
         ItemsButton.interactable = true;
+
+        SpawnSkillMenuButtons();
+
     }
 
-    IEnumerator PlayerAttack(){
+    IEnumerator PlayerAttack() {
         //disable buttons
         AttackButton.interactable = false;
-        SkillsButton.interactable = false;
+        SkillChoiceButton.interactable = false;
         ItemsButton.interactable = false;
 
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
@@ -100,24 +104,24 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        if(isDead){
+        if (isDead) {
             state = BattleState.WON;
             EndBattle();
-        }else{
+        } else {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
     }
 
     //!!!! TEMPORARY, ENEMY SIMPLY ATTACKS FOR NOW !!!!!!!!!!!!!!
-    IEnumerator EnemyTurn(){
+    IEnumerator EnemyTurn() {
         //disable buttons
         AttackButton.interactable = false;
-        SkillsButton.interactable = false;
+        SkillChoiceButton.interactable = false;
         ItemsButton.interactable = false;
 
         dialogueText.text = enemyUnit.unitName + " attacks!";
-        
+
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
@@ -125,10 +129,10 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHP(playerUnit.currentHP);
         yield return new WaitForSeconds(1f);
 
-        if(isDead){
+        if (isDead) {
             state = BattleState.LOST;
             EndBattle();
-        }else{
+        } else {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
@@ -138,26 +142,26 @@ public class BattleSystem : MonoBehaviour
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("PreviousScene", "DefaultScene"));
     }
-    void EndBattle(){
+    void EndBattle() {
         //disable buttons
         AttackButton.interactable = false;
-        SkillsButton.interactable = false;
+        SkillChoiceButton.interactable = false;
         ItemsButton.interactable = false;
-        
-        if (state == BattleState.WON){
+
+        if (state == BattleState.WON) {
             dialogueText.text = "You won the battle!";
         }
-        else if (state == BattleState.LOST){
+        else if (state == BattleState.LOST) {
             dialogueText.text = "You were defeated.";
         }
         LoadArea();
     }
 
 
-//Action menu buttons
+    //Action menu buttons
 
-    public void OnAttackButton(){
-        if (state != BattleState.PLAYERTURN){
+    public void OnAttackButton() {
+        if (state != BattleState.PLAYERTURN) {
             return;
         }
 
@@ -166,7 +170,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnSkillsButton()
     {
-        if (state != BattleState.PLAYERTURN) { 
+        if (state != BattleState.PLAYERTURN) {
             return;
         }
 
@@ -196,5 +200,26 @@ public class BattleSystem : MonoBehaviour
         SkillPanel.interactable = false;
         SkillPanel.blocksRaycasts = false;
 
+    }
+
+    public void SpawnSkillMenuButtons()
+    {
+        //Clear skill buttons
+        foreach (Transform child in SkillButtonContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        //Skill button spawning
+        foreach (SkillBase skill in playerUnit.skills)
+        {
+            GameObject buttonGO = Instantiate(SkillButtonPrefab, SkillButtonContainer);
+            Button button = buttonGO.GetComponent<Button>();
+            TextMeshProUGUI buttonText = buttonGO.GetComponentInChildren<TextMeshProUGUI>();
+
+            buttonText.text = skill.name;
+            button.onClick.AddListener(() => skill.UseSkill(playerUnit, enemyUnit));
+
+        }
     }
 }

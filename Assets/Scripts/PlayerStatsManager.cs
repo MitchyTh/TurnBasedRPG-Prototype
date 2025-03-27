@@ -10,6 +10,7 @@ public class PlayerStatsManager : MonoBehaviour
     public int damage = 10;
     public List<SkillBase> skillList = new List<SkillBase>();
 
+
     private void Awake()
     {
         if (Instance == null)

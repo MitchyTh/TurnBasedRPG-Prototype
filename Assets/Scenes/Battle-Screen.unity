@@ -440,6 +440,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1053871876}
+  - {fileID: 1394153964}
   m_Father: {fileID: 73805067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1057,9 +1058,9 @@ RectTransform:
   - {fileID: 620620064}
   m_Father: {fileID: 248345549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -64.6}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 91.93, y: -146.8}
   m_SizeDelta: {x: 160, y: 20.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1053871877
@@ -2487,6 +2488,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371531482}
   m_CullTransparentMesh: 1
+--- !u!1 &1394153963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394153964}
+  - component: {fileID: 1394153965}
+  m_Layer: 5
+  m_Name: SkillsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1394153964
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394153963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 248345549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000095367, y: 12.61}
+  m_SizeDelta: {x: 183.86, y: 128.42}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1394153965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394153963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 6
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1413459934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,9 +3384,11 @@ MonoBehaviour:
   playerHUD: {fileID: 274629028}
   enemyHUD: {fileID: 2126722140}
   AttackButton: {fileID: 1867917164}
-  SkillsButton: {fileID: 1216545092}
+  SkillChoiceButton: {fileID: 1216545092}
   ItemsButton: {fileID: 1226325610}
   ReturnButton: {fileID: 1053871877}
+  SkillButtonPrefab: {fileID: 9052704686283929739, guid: 8712f8e1c6f44e24c9a75ee0c1bb474f, type: 3}
+  SkillButtonContainer: {fileID: 1394153964}
   ActionPanel: {fileID: 1413459938}
   SkillPanel: {fileID: 248345552}
   dialogueText: {fileID: 224863828}
