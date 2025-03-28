@@ -8,6 +8,8 @@ public class PlayerStatsManager : MonoBehaviour
     public int HP = 30;
     public int MaxHP = 30;
     public int damage = 10;
+
+    public int lossHP = 1;
     public List<SkillBase> skillList = new List<SkillBase>();
 
 

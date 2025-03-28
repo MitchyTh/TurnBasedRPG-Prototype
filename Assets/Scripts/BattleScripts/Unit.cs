@@ -11,6 +11,7 @@ public class Unit : MonoBehaviour
 
     public int maxHP;
     public int currentHP;
+
     public List<SkillBase> skills = new List<SkillBase>();
 
     private void Awake()

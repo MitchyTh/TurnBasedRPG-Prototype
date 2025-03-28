@@ -16,6 +16,10 @@ public class BattleHUD : MonoBehaviour
     }
 
     public void SetHP(int hp){
+        if(hp <= 0)
+        {
+            hp = 0;
+        }
         hpSlider.value = hp;
         hpDigit.text = hp.ToString();
     }

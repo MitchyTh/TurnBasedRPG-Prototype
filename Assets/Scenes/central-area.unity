@@ -133575,9 +133575,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661fe6be42a4d6d4a997333a569efcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 30
+  HP: 8
   MaxHP: 30
   damage: 10
+  lossHP: 1
   skillList:
   - {fileID: 11400000, guid: dd2f538ff43a1b94980dad371ac0cdc4, type: 2}
   - {fileID: 11400000, guid: 7a7062ef6a91368478b620cb8a831f97, type: 2}

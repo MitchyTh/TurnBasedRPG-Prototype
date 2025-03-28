@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
         PlayerStatsManager.Instance.HP -= dmg;
         if (PlayerStatsManager.Instance.HP <= 0)
         {
+            PlayerStatsManager.Instance.HP = PlayerStatsManager.Instance.lossHP;
             return true;
         }
         return false;

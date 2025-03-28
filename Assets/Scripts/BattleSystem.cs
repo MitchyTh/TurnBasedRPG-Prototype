@@ -122,12 +122,15 @@ public class BattleSystem : MonoBehaviour
 
         dialogueText.text = enemyUnit.unitName + " attacks!";
 
+
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-        playerHUD.SetHP(playerUnit.currentHP);
+        
         yield return new WaitForSeconds(1f);
+
+        playerHUD.SetHP(playerUnit.currentHP);
 
         if (isDead) {
             state = BattleState.LOST;
