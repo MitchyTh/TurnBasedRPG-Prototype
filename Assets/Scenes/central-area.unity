@@ -133575,7 +133575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661fe6be42a4d6d4a997333a569efcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 8
+  HP: 30
   MaxHP: 30
   damage: 10
   lossHP: 1
