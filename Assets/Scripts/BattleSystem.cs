@@ -9,6 +9,9 @@ using Button = UnityEngine.UI.Button;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
+    /**********
+        BATTLE WON TRACKED IN PlayerPrefs.GetInt("BattleWon", "")
+     **********/
     public string currentScene;
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -106,7 +109,7 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead) {
             state = BattleState.WON;
-            EndBattle();
+            StartCoroutine(EndBattle());
         } else {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
@@ -134,18 +137,20 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead) {
             state = BattleState.LOST;
-            EndBattle();
+            StartCoroutine(EndBattle());
         } else {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
     }
 
-    public void LoadArea()
+    void LoadArea()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("PreviousScene", "DefaultScene"));
+        PlayerPrefs.DeleteKey("PreviousScene"); //clear stored value
+
     }
-    void EndBattle() {
+    IEnumerator EndBattle() {
         //disable buttons
         AttackButton.interactable = false;
         SkillChoiceButton.interactable = false;
@@ -153,10 +158,17 @@ public class BattleSystem : MonoBehaviour
 
         if (state == BattleState.WON) {
             dialogueText.text = "You won the battle!";
+            PlayerPrefs.SetInt("BattleWon", 1); //track battle state
+            PlayerPrefs.Save();
         }
         else if (state == BattleState.LOST) {
             dialogueText.text = "You were defeated.";
+            PlayerPrefs.SetInt("BattleWon", 0);
+            PlayerPrefs.Save();
         }
+
+        yield return new WaitForSeconds(2f); //wait before returning to overworld
+        
         LoadArea();
     }
 
