@@ -199,6 +199,8 @@ public class BattleSystem : MonoBehaviour
 
     }
 
+
+
     //Skill menu buttons
     public void OnReturnButton()
     {
@@ -217,6 +219,34 @@ public class BattleSystem : MonoBehaviour
 
     }
 
+    public IEnumerator UseSkill(SkillBase skill)
+    {
+        skill.UseSkill(playerUnit, enemyUnit);
+
+        AttackButton.interactable = false;
+        SkillChoiceButton.interactable = false;
+        ItemsButton.interactable = false;
+
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialogueText.text = playerUnit.unitName + " is using " + skill.name + "!";
+
+        yield return new WaitForSeconds(2f);
+
+        OnReturnButton();
+
+        if (isDead)
+        {
+            state = BattleState.WON;
+            StartCoroutine(EndBattle());
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
+    }
+
     public void SpawnSkillMenuButtons()
     {
         //Clear skill buttons
@@ -228,13 +258,14 @@ public class BattleSystem : MonoBehaviour
         //Skill button spawning
         foreach (SkillBase skill in playerUnit.skills)
         {
+            SkillBase capturedSkill = skill;  // avoid closure issue
             GameObject buttonGO = Instantiate(SkillButtonPrefab, SkillButtonContainer);
             Button button = buttonGO.GetComponent<Button>();
             TextMeshProUGUI buttonText = buttonGO.GetComponentInChildren<TextMeshProUGUI>();
 
-            buttonText.text = skill.name;
-            button.onClick.AddListener(() => skill.UseSkill(playerUnit, enemyUnit));
+            buttonText.text = capturedSkill.name;
 
+            button.onClick.AddListener(() => StartCoroutine(UseSkill(capturedSkill)));
         }
     }
 }

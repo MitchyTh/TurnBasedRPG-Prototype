@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 1580848581032658849}
   - component: {fileID: 6099879325266564626}
   - component: {fileID: 1463617238685254136}
+  - component: {fileID: 131386760030550840}
   - component: {fileID: 5930459771636745760}
   m_Layer: 5
   m_Name: SkillsButton
@@ -215,6 +216,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &131386760030550840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052704686283929739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9958ef56d43eb0d4db1d5122e0319fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BattleSystem: {fileID: 0}
+  SkillBase: {fileID: 0}
 --- !u!114 &5930459771636745760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,13 +274,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnReturnButton
+      - m_Target: {fileID: 11500000, guid: 9958ef56d43eb0d4db1d5122e0319fbb, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
