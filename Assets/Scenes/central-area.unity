@@ -135379,7 +135379,7 @@ MonoBehaviour:
   lossHP: 1
   skillList:
   - {fileID: 11400000, guid: dd2f538ff43a1b94980dad371ac0cdc4, type: 2}
-  - {fileID: 11400000, guid: 7a7062ef6a91368478b620cb8a831f97, type: 2}
+  - {fileID: 11400000, guid: 5d64084f723293c4fa956125c482fdad, type: 2}
   - {fileID: 11400000, guid: 1731175d0b8fbdb4fac7ded568f85597, type: 2}
 --- !u!4 &1982272023
 Transform:

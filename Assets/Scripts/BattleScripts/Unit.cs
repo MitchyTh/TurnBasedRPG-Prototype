@@ -44,4 +44,25 @@ public class Unit : MonoBehaviour
         }
 
     }
+
+    public bool HealDamage(int health)
+    {
+        currentHP += health;
+
+        if (CompareTag("Player")) //alters player health to persist across battles
+        {
+            PlayerStats playerStats = GetComponent<PlayerStats>();
+            playerStats.HealDamage(health);
+        }
+
+        if (currentHP <= 0)
+        {
+            currentHP = 0;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

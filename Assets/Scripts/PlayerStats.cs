@@ -18,4 +18,13 @@ public class PlayerStats : MonoBehaviour
         }
         return false;
     }
+    public bool HealDamage(int health) {
+    PlayerStatsManager.Instance.HP += health;
+        if (PlayerStatsManager.Instance.HP > PlayerStatsManager.Instance.MaxHP)
+        {
+            PlayerStatsManager.Instance.HP = PlayerStatsManager.Instance.MaxHP;
+            return true;
+        }
+        return false;
+    }
 }

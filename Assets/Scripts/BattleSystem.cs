@@ -221,13 +221,22 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator UseSkill(SkillBase skill)
     {
-        skill.UseSkill(playerUnit, enemyUnit);
+        int skillTypeCheck = skill.UseSkill(playerUnit, enemyUnit);
 
         AttackButton.interactable = false;
         SkillChoiceButton.interactable = false;
         ItemsButton.interactable = false;
+        bool isDead;
 
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        if (skillTypeCheck == 1)
+        {
+            isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        }
+        else
+        {
+            isDead = false;
+        }
+
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = playerUnit.unitName + " is using " + skill.name + "!";
 

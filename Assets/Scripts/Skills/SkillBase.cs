@@ -19,5 +19,5 @@ public abstract class SkillBase : ScriptableObject
     public int Accuracy => accuracy;
 
 
-    public abstract void UseSkill(Unit user, Unit target);
+    public abstract int UseSkill(Unit user, Unit target);
 }
