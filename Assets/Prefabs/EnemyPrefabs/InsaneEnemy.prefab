@@ -136,4 +136,5 @@ MonoBehaviour:
   damage: 30
   maxHP: 100
   currentHP: 100
-  skills: []
+  skills:
+  - {fileID: 11400000, guid: e91adbd3bcf0f43a8b2db1def0404342, type: 2}

@@ -123,12 +123,36 @@ public class BattleSystem : MonoBehaviour
         SkillChoiceButton.interactable = false;
         ItemsButton.interactable = false;
 
-        dialogueText.text = enemyUnit.unitName + " attacks!";
-
+        //dialogueText.text = enemyUnit.unitName + " attacks!";
 
         yield return new WaitForSeconds(1f);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        bool isCritical = Random.value < 0.2f; //20% chance of critical hit
+
+        // 40% chance to use random skill or default attack
+        SkillBase chosenSkill = null;
+        if (enemyUnit.skills != null && enemyUnit.skills.Count > 0 && Random.value < 0.4f)
+        {
+            chosenSkill = enemyUnit.skills[Random.Range(0, enemyUnit.skills.Count)];
+        }
+
+        int damage = enemyUnit.damage;
+
+        //critical hit on base attack only
+        if (isCritical) {
+            damage = Mathf.RoundToInt(damage * 1.5f); // 1.5x damage for crit
+            dialogueText.text = $"{enemyUnit.unitName} lands a CRITICAL hit!";
+        }
+        else if (chosenSkill != null) {
+            dialogueText.text = $"{enemyUnit.unitName} uses {chosenSkill.name}!";
+            chosenSkill.UseSkill(enemyUnit, playerUnit); // you can add more nuanced effects in SkillBase
+            damage = chosenSkill.Power; // assume SkillBase has damageAmount
+        }
+        else {
+            dialogueText.text = $"{enemyUnit.unitName} attacks!";
+        }
+
+        bool isDead = playerUnit.TakeDamage(damage);
 
         
         yield return new WaitForSeconds(1f);
