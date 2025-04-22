@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Scratch
   description: CatEnemy
-  power: 15
+  power: 9
   accuracy: 70

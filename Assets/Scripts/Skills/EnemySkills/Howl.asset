@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc93ce75cc08104499dba46d3e8f4b5, type: 3}
   m_Name: Howl
   m_EditorClassIdentifier: 
-  skillName: Glare
-  description: SirEnemy
-  power: 8
-  accuracy: 70
+  skillName: Howl
+  description: WolfEnemy
+  power: 12
+  accuracy: 60

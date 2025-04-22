@@ -1,16 +1,17 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerInteractionController : MonoBehaviour
 {
-    // Three-slot inventory to hold picked up items.
-    public GameObject[] inventory = new GameObject[3];
+    // Twelve-slot inventory to hold picked up items.
+    public GameObject[] inventory = new GameObject[12];
 
     // Reference to the interaction textbox UI (e.g., a panel with a Text component).
     // Ensure this GameObject is initially inactive in the scene.
     public GameObject interactionTextBox;
     // Reference to the Text component within the textbox.
-    public Text interactionText;
+    public TextMeshProUGUI interactionText;
 
     // Distance for the raycast used for interactions.
     public float interactionDistance = 2f;
@@ -30,20 +31,26 @@ public class PlayerInteractionController : MonoBehaviour
             lastDirection = inputDir.normalized;
         }
 
+        //slightly offset raycast origin to avoid glitching with player box collider
+        Vector2 origin = (Vector2)transform.position + lastDirection * 0.5f; // offset by 0.5 units
+        RaycastHit2D hit = Physics2D.Raycast(origin, lastDirection, interactionDistance);
+        Debug.DrawRay(origin, lastDirection * interactionDistance, Color.red, 1f);
+
+
         // When the player presses E, attempt to pick up an item.
         if (Input.GetKeyDown(KeyCode.E))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, lastDirection, interactionDistance);
             if (hit.collider != null && hit.collider.CompareTag("Item"))
             {
+                GameObject object = hit.collider.gameObject; 
                 pickUp(hit.collider.gameObject);
+                lookAt(GameObject item)
             }
         }
 
         // When the player presses F, look at the object (for "Inspectable" objects).
         if (Input.GetKeyDown(KeyCode.F))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, lastDirection, interactionDistance);
             if (hit.collider != null && hit.collider.CompareTag("Inspectable"))
             {
                 lookAt(hit.collider.gameObject);
@@ -53,7 +60,6 @@ public class PlayerInteractionController : MonoBehaviour
         // When the player presses T, talk to NPCs or Enemies.
         if (Input.GetKeyDown(KeyCode.T))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, lastDirection, interactionDistance);
             if (hit.collider != null && (hit.collider.CompareTag("NPC") || hit.collider.CompareTag("Enemy")))
             {
                 talkTo(hit.collider.gameObject);

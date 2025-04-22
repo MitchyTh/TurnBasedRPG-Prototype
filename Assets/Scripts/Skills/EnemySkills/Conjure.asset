@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Conjure
   description: GhostLadyEnemy
-  power: 20
+  power: 7
   accuracy: 50
