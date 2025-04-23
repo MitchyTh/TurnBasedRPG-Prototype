@@ -42,9 +42,9 @@ public class PlayerInteractionController : MonoBehaviour
         {
             if (hit.collider != null && hit.collider.CompareTag("Item"))
             {
-                GameObject object = hit.collider.gameObject; 
-                pickUp(hit.collider.gameObject);
-                lookAt(GameObject item)
+                GameObject item = hit.collider.gameObject; 
+                pickUp(item);
+                lookAt(item);
             }
         }
 
