@@ -31,7 +31,7 @@ public class EncounterTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //dialogueText.text = "You are going to do down!!";
+        //dialogueText.text = "You are going to go down!!";
         if (other.CompareTag("Player"))
         {
 
