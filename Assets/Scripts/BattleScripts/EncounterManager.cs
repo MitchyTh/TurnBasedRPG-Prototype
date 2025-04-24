@@ -19,6 +19,13 @@ public class EncounterManager : MonoBehaviour
             **********************/
             PlayerPrefs.DeleteKey("DefeatedEnemies");
             PlayerPrefs.Save();
+
+            /*********************
+            these lines will reset the collected item list when the game stops and restarts. 
+            To prevent this, remove the following two lines:
+            **********************/
+            PlayerPrefs.DeleteKey("CollectedItems");
+            PlayerPrefs.Save();
         }
         else
         {
