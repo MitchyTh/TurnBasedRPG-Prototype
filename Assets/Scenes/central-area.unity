@@ -4739,6 +4739,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae79611fea404b6bb66708884764883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotImages:
+  - {fileID: 1774834718}
+  - {fileID: 1863845141}
+  - {fileID: 339507232}
+  - {fileID: 674448550}
+  - {fileID: 1595426750}
+  - {fileID: 857742932}
+  - {fileID: 1852860893}
+  - {fileID: 506062746}
+  - {fileID: 1955137239}
+  - {fileID: 470306864}
+  - {fileID: 1609131229}
+  - {fileID: 1969248765}
 --- !u!1 &175427303
 GameObject:
   m_ObjectHideFlags: 0
@@ -7190,6 +7203,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (10)
@@ -8874,6 +8895,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &339507232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 630258347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &352872303
 GameObject:
   m_ObjectHideFlags: 0
@@ -13195,6 +13227,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &470306864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 1913694052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &470887710
 GameObject:
   m_ObjectHideFlags: 0
@@ -14768,6 +14811,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &506062746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 1269327508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507367931
 GameObject:
   m_ObjectHideFlags: 0
@@ -15740,6 +15794,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (6)
@@ -16466,6 +16528,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (4)
@@ -17477,6 +17547,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (2)
@@ -18528,6 +18606,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &674448550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 714092005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &674606361
 GameObject:
   m_ObjectHideFlags: 0
@@ -104792,6 +104881,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (3)
@@ -108516,6 +108613,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &857742932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 1450802566}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861314411
 GameObject:
   m_ObjectHideFlags: 0
@@ -110920,6 +111028,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (1)
@@ -111529,6 +111645,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (11)
@@ -117842,6 +117966,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (7)
@@ -120641,6 +120773,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (5)
@@ -121983,6 +122123,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  inventoryUI: {fileID: 174467983}
   interactionTextBox: {fileID: 2009923562}
   interactionText: {fileID: 1998058111}
   interactionDistance: 2
@@ -124667,6 +124808,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1595426750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 579105767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1598407723
 GameObject:
   m_ObjectHideFlags: 0
@@ -125015,6 +125167,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1609131229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 265074029}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1610613023
 GameObject:
   m_ObjectHideFlags: 0
@@ -125224,7 +125387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.889038, y: 4536.701}
+  m_AnchoredPosition: {x: -12.889008, y: 4536.7007}
   m_SizeDelta: {x: -103.6557, y: -294.3405}
   m_Pivot: {x: 0.62434477, y: -14.348582}
 --- !u!114 &1619746646
@@ -130122,6 +130285,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8125, y: 2.1875}
   m_EdgeRadius: 0
+--- !u!114 &1774834718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 1436667493304361920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1776108146
 GameObject:
   m_ObjectHideFlags: 0
@@ -131084,6 +131258,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1852860893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 564512081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1853194516
 GameObject:
   m_ObjectHideFlags: 0
@@ -131258,6 +131443,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1863845141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 949495506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866234227
 GameObject:
   m_ObjectHideFlags: 0
@@ -132985,6 +133181,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (8)
@@ -133927,6 +134131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot (9)
@@ -135199,6 +135411,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1955137239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 1881183523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1957351496
 GameObject:
   m_ObjectHideFlags: 0
@@ -135460,6 +135683,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1969248765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+  m_PrefabInstance: {fileID: 973088381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1970236947
 GameObject:
   m_ObjectHideFlags: 0
@@ -139343,6 +139577,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 964845934}
     m_Modifications:
+    - target: {fileID: 26403750591552642, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219572502584609491, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7653739612408974791, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7653739612408974791, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 733fd6c6fb60e4d0f90406931ec04ded, type: 3}
     - target: {fileID: 7896742553128199893, guid: 35ab6587851cd4741815294c173b9cd4, type: 3}
       propertyPath: m_Name
       value: InventorySlot

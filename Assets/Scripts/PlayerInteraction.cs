@@ -6,6 +6,7 @@ public class PlayerInteractionController : MonoBehaviour
 {
     // Twelve-slot inventory to hold picked up items.
     public GameObject[] inventory = new GameObject[12];
+    public InventoryUIManager inventoryUI; //used to update inventory UI
 
     // Reference to the interaction textbox UI (e.g., a panel with a Text component).
     // Ensure this GameObject is initially inactive in the scene.
@@ -78,6 +79,8 @@ public class PlayerInteractionController : MonoBehaviour
                 // Optionally remove the item from the scene.
                 item.SetActive(false);
                 Debug.Log("Picked up: " + item.name);
+
+                inventoryUI.UpdateUI(inventory);
                 return;
             }
         }
